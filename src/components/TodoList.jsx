@@ -15,7 +15,12 @@ class TodoList extends Component {
             return (
               <li key={todo.id} className="list-group-item">
                 <div>{todo.text}</div>
-                <button className="remove btn btn-danger m-2" onClick={() => this.props.del_todo(todo.id)}>x</button>
+                <button 
+                    className="remove btn btn-danger" 
+                    style={{float:"right"}}
+                    onClick={() => this.props.del_todo(todo.id)}>
+                    delete
+                </button>
               </li>
             )
           })
